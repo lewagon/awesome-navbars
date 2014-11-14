@@ -2,7 +2,7 @@
 
 ## HTML template
 
-Start by copying the HTML for the Boostrap navbar with an extra `.navbar-perso` class to over-ride your navbar. You can add the `.navbar-fixed-top` Bootstrap class to fix it on top of your page.
+Start by copying the HTML for the Boostrap navbar with an extra `.navbar-perso` class to over-ride Bootstrap default style. You can also add the `.navbar-fixed-top` class to fix your navbar on top of the page.
 
 
 ```html
@@ -51,14 +51,16 @@ Of course, you have to find a logo image.
 Copy our CSS file `navbar.css` in your website folder and link this stylesheet in your HTML file.
 
 ```html
-<link rel="stylesheet" href="navbar.css">
+<link rel="stylesheet" href="path/to/navbar.css">
 ```
 
 ### How to change your navbar look
 
 #### Navbar height
 
-- Replace `40px` by the height of your choice in all the lines `line-height: 40px;` of `navbar.css`. **Do not to change these values in the media query section** `@media screen and (max-width: 640px)`.
+- Replace `40px` by the height of your choice in all the lines `line-height: 40px;` of `navbar.css`.
+
+- **Do not change line-heights in all the media query section** (`@media screen and (max-width: 640px)`).
 
 - Change your `#logo` height to the **same line-height you have chosen**.
 
