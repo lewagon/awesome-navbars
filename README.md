@@ -52,7 +52,7 @@ Copy our CSS file `navbar.css` in your website folder and link this stylesheet i
 
 ```html
 <link rel="stylesheet" href="navbar.css">
-``
+```
 
 ### How to change your navbar look
 
