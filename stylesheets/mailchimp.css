@@ -1,0 +1,106 @@
+body{
+  background: #323232;
+}
+
+.navbar-mailchimp{
+  background: white;
+  border-bottom: 1px solid lighgrey;
+}
+
+.navbar-mailchimp .navbar-nav > li > a {
+  color: black;
+  line-height: 60px;
+}
+
+.navbar-mailchimp .navbar-nav > li > a:hover {
+  color: black;
+  line-height: 60px;
+}
+
+.navbar-mailchimp .navbar-nav>.open>a,
+.navbar-mailchimp .navbar-nav>.open>a:hover,
+.navbar-mailchimp .navbar-nav>.open>a:focus {
+  line-height: 60px;
+  color: black;
+  background-color: transparent;
+}
+
+.navbar-mailchimp .navbar-brand,
+.navbar-mailchimp .navbar-brand:hover
+ {
+  display: block;
+  height: 100%;
+  color: black: ;
+}
+
+#nav-btn {
+  background-color: #E85C41;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  line-height: 10px;
+  margin-top: 25px;
+  margin-right: 25px;
+}
+
+#logo{
+  height: 60px;
+  padding: 10px;
+}
+
+.navbar-nav > li > .dropdown-menu{
+  border-radius: 0;
+  margin-top: 10px;
+}
+
+.navbar-nav > li > .dropdown-menu:before{
+  background: white;
+  height: 20px;
+  width: 20px;
+  content: "\00a0";
+  display: block;
+  left: 50%;
+  margin-left: -10px;
+  position: absolute;
+  bottom: 45px;
+  transform: rotate(45deg);
+  z-index: -1;
+}
+
+@media screen and (max-width: 640px) {
+  #logo {
+    height: 20px;
+    margin-top: -10px;
+  }
+  .navbar-mailchimp .navbar-nav > li > a {
+    line-height: 30px;
+  }
+
+  .navbar-mailchimp .navbar-nav > li > a:hover {
+    line-height: 30px;
+  }
+
+  .navbar-mailchimp .navbar-nav>.open>a,
+  .navbar-mailchimp .navbar-nav>.open>a:hover,
+  .navbar-mailchimp .navbar-nav>.open>a:focus {
+    line-height: 30px;
+  }
+
+  .navbar-mailchimp .navbar-brand,
+  .navbar-mailchimp .navbar-brand:hover
+   {
+    line-height: 30px;
+  }
+
+  #nav-btn {
+    background-color: #009AAB;
+    display: block;
+    width: 50%;
+    color: #fff;
+    border: none;
+    border-radius: 0;
+    line-height: 15px;
+    margin: 25px auto;
+  }
+}
+
