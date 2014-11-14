@@ -82,9 +82,12 @@ It will automatically resize your logo image.
 
 If you have changed your navbar height, you have to adjust your navbar button margin-top.
 
+```css
 #nav-btn {
   margin-top: 15px; /* change it depending on you navbar height */
 }
+```
+
 
 Of course, feel free to change you button height and background!
 
