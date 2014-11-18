@@ -51,7 +51,7 @@ Our `navbar.scss` implements style rules on the `.wagon-navbar` class. Herebelow
 
 - Change your navbar background and text color
 
-```sass
+```scss
 $color: black;
 $bg: white;
 ```
