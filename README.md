@@ -106,7 +106,7 @@ $profile-border-width: 2px;
 
 ### Static project
 
-#### Sass gem
+#### Install the sass gem
 
 If your have a static website, install the `sass` gem:
 
@@ -114,7 +114,7 @@ If your have a static website, install the `sass` gem:
 gem install sass
 ```
 
-#### Sass gem
+#### Respect the folder architecture
 
 Your app folder should respect the following architecture:
 
