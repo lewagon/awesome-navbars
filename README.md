@@ -123,7 +123,7 @@ app
  |
  *-- sass
  |    |
- |    *-- navbar.scss
+ |    *-- navbar.scss (our SCSS file)
  |
  *-- stylesheets
  |
