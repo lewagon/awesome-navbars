@@ -73,7 +73,7 @@ $border-bottom-color: transparent;
 
 ### Navbar button style
 
-Our `navbar.scss` gives you lots of flexibility for pimping your navbar button.
+Our `navbar.scss` gives you lot of flexibility for pimping your navbar button.
 
 ```scss
 $btn-height: 40px;
@@ -92,7 +92,7 @@ $btn-left-border-color: transparent;
 
 ### Profile picture style
 
-You can also pimp your navbar profile picture, changin its radius and its border
+You can also pimp your navbar profile picture by changing its radius and its border
 
 ```scss
 // Set your profile picture
@@ -106,17 +106,17 @@ $profile-border-width: 2px;
 
 ### Static project
 
-If your have a static website.
+#### Sass gem
 
-- install the `sass` gem
+If your have a static website, install the `sass` gem:
 
 ```
 gem install sass
 ```
 
-- go into your website folder in the terminal.
+#### Sass gem
 
-Your folder should have the following architecture:
+Your app folder should respect the following architecture:
 
 ```
 app
@@ -136,28 +136,27 @@ In your HTML `<head>`, don't forget to add the link to your stylesheet:
 <link rel="stylesheet" href="stylesheets/navbar.css">
 ```
 
-Now you just have to ask sass to regenerate dynamically your CSS file when you change its SCSS version, with the following command:
+Now you just have to ask sass to regenerate dynamically your CSS files when you change its SCSS versions. Go into your app folder in the terminal and run the following command:
 
 ```
 $ sass -w sass:stylesheets
 ```
 
-The sass commands ask your the original folder of your SCSS files and the target folder of the generated CSS files (`sass -w origin_folder:target_folder`). The `-w` (watch) option asks sass to watch your sass folder and dynamically regenerate your CSS files.
-
+This command will watch for your `.scss` files in the `sass` folder and generate dynamically the associated `.css` files in the `stylesheets` folder (`sass -w origin_folder:target_folder`).
 
 ### In Rails
 
-In Rails, Sass integration is much easier, if you have `sass-rails` and `bootstrap-sass` gems, you can just add the `navbar.scss` file to your Rails stylesheets, and then import this file in `application.css.scss`
+In Rails, the integration is much easier if you have installed `sass-rails` and `bootstrap-sass` gems. You can just add the `navbar.scss` file to your Rails stylesheets, and then import this file in `application.css.scss`
 
 
 ```scss
 //application.css.scss
 
-// bootstrap-sass import
+// "bootstrap-sass" imports
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-// our navbar over-ride
+// Import our navbar.scss after bootstrap
 @import "navbar";
 ```
 
@@ -165,7 +164,7 @@ Here you go!
 
 ### Contribute, share your masterpiece!
 
-Feel free to contribute to this project making pull requests, and to share with us your navbar masterpiece!
+Feel free to contribute to this project with pull requests, and to share with us your navbar masterpieces.
 
 - Twitter: https://twitter.com/lewagonparis
 - Facebook: facebook.com/lewagonformation
