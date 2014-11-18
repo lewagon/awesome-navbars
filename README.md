@@ -68,7 +68,7 @@ $horizontal-padding: 20px;
 
 ```scss
 $border-bottom-width: 0;
-$border-bottom-color: grey;
+$border-bottom-color: transparent;
 ```
 
 ### Navbar button style
