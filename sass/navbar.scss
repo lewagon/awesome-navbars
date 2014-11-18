@@ -1,0 +1,158 @@
+// Set your navbar general settings
+$color: black;
+$bg: white;
+$height: 40px;
+$vertical-padding: 10px;
+$horizontal-padding: 20px;
+$border-bottom-width: 0;
+$border-bottom-color: grey;
+
+// Set your navbar button
+$btn-height: 40px;
+$btn-bg: lightgrey;
+$btn-color: black;
+$btn-horizontal-padding: 10px;
+$btn-top-border-width: 0;
+$btn-top-border-color: transparent;
+$btn-right-border-width: 0;
+$btn-right-border-color: transparent;
+$btn-bottom-border-width: 3px;
+$btn-bottom-border-color: grey;
+$btn-left-border-width: 0;
+$btn-left-border-color: transparent;
+
+// Set your profile picture
+$profile-radius: 20%;
+$profile-border-color: white;
+$profile-border-width: 2px;
+
+
+// And do not look at what follows!
+// This is why we use sass :)
+.navbar-wagon{
+  background: $bg;
+  border: none;
+  font-weight: 400;
+  padding-left: $horizontal-padding;
+  padding-right: $horizontal-padding;
+  border-bottom: $border-bottom-width solid $border-bottom-color;
+  min-height: 0;
+}
+
+.navbar-wagon .navbar-nav > li > a {
+  color: $color;
+  line-height: $height;
+  padding-top: $vertical-padding;
+  padding-bottom: $vertical-padding;
+}
+
+.navbar-wagon .navbar-nav > li > a:hover {
+  color: $color;
+  line-height: $height;
+  padding-top: $vertical-padding;
+  padding-bottom: $vertical-padding;
+}
+
+.navbar-wagon .navbar-nav>.open>a,
+.navbar-wagon .navbar-nav>.open>a:hover,
+.navbar-wagon .navbar-nav>.open>a:focus {
+  line-height: $height;
+  padding-top: $vertical-padding;
+  padding-bottom: $vertical-padding;
+  color: $color;
+  background-color: transparent;
+}
+
+.navbar-wagon .navbar-brand,
+.navbar-wagon .navbar-brand:hover
+ {
+  display: block;
+  color: $color;
+  padding-top: $vertical-padding;
+  padding-bottom: $vertical-padding;
+}
+
+$btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-border-width - $btn-bottom-border-width) / 2;
+
+#nav-btn {
+  line-height: $btn-height;
+  padding: 0 $btn-horizontal-padding;
+  color: $btn-color;
+  border-radius: 4px;
+  margin-top: $btn-margin-top;
+  border-radius: 2px;
+  font-weight: bold;
+  background-color: $btn-bg;
+  border-top: $btn-top-border-width solid $btn-top-border-color;
+  border-right: $btn-right-border-width solid $btn-right-border-color;
+  border-bottom: $btn-bottom-border-width solid $btn-bottom-border-color;
+  border-left: $btn-left-border-width solid $btn-left-border-color;
+  font-size: 12px;
+}
+
+
+#nav-btn:hover{
+  background-color: $btn-bg;
+  border-bottom: ($btn-bottom-border-width * 2/3) solid $btn-bottom-border-color;
+  margin-top: $btn-margin-top + ($btn-bottom-border-width  * 1/3);
+}
+
+#nav-btn:active{
+  margin-top: $btn-margin-top + $btn-bottom-border-width;
+  border-bottom: none;
+}
+
+#logo{
+  height: $height;
+  padding: 0px;
+}
+
+.navbar-wagon #profile-pic{
+  border: $profile-border-width solid $profile-border-color;
+  box-shadow: 0 0 2px rgb(200, 200, 200);
+  height: $height - (2 * $profile-border-width);
+  margin-right: 10px;
+  border-radius: $profile-radius;
+}
+
+.navbar-wagon .navbar-toggle {
+  border-color: #dddddd;
+  width: 45px;
+  background: transparent;
+}
+
+
+.navbar-wagon .navbar-nav > li > .dropdown-menu{
+  border-radius: 0;
+  margin-top: $vertical-padding + 5px;
+}
+
+.navbar-wagon .navbar-nav > li > .dropdown-menu:before{
+  background: white;
+  height: 10px;
+  width: 10px;
+  content: "\00a0";
+  display: block;
+  left: 50%;
+  margin-left: -5px;
+  position: absolute;
+  bottom: 57px;
+  transform: rotate(45deg);
+  border-top: 1px solid #e6e6e6;
+  border-left: 1px solid #e6e6e6;
+  z-index: -1;
+}
+
+@media screen and (max-width: 768px) {
+  #logo {
+    height: 50px;
+  }
+  .navbar-wagon .navbar-brand,
+  .navbar-wagon .navbar-brand:hover
+   {
+    display: block;
+    color: $color;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}

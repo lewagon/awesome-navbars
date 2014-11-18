@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
 
     <!-- Airbnb nav CSS -->
-    <link rel="stylesheet" href="stylesheets/airbnb.css">
+    <link rel="stylesheet" href="stylesheets/navbar.css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- Leave those next 4 lines if you care about users using IE8 -->
@@ -22,7 +22,13 @@
   </head>
   <body>
 
-    <nav class="navbar navbar-default navbar-fixed-top navbar-airbnb" role="navigation">
+    <style>
+      body{
+        background: #191919;
+      }
+    </style>
+
+    <nav class="navbar navbar-default navbar-fixed-top navbar-wagon" role="navigation">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -42,12 +48,12 @@
 
 
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#">Contact</a></li>
+            <li><a href="#"><i class="fa fa-envelope-o"></i> Contact</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Suivez-nous <span class="caret"></span></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="http://placehold.it/30x30" id="profile-pic" alt="">Follow-us <span class="caret"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="#"><i class="fa fa-youtube-square"></i> Youtube</a></li>
-                <li><a href="#"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                <li><a href="https://www.facebook.com/lewagonformation"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+                <li><a href="https://twitter.com/lewagonparis"><i class="fa fa-twitter-square"></i> Twitter</a></li>
               </ul>
             </li>
             <li><a href="#" class="btn btn-primary" id="nav-btn">Publish an announce</a></li>

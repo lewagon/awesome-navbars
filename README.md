@@ -1,12 +1,11 @@
-# Over-riding Bootstrap navbar
+# Wagon SCSS Bootstrap navbar
 
 ## HTML template
 
-Start by copying the HTML for the Boostrap navbar with an extra `.navbar-perso` class to over-ride Bootstrap default style. You can also add the `.navbar-fixed-top` class to fix your navbar on top of the page.
-
+Starts by copying our navbar HTML
 
 ```html
-<nav class="navbar navbar-default navbar-perso" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top navbar-wagon" role="navigation">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -26,12 +25,12 @@ Start by copying the HTML for the Boostrap navbar with an extra `.navbar-perso` 
 
 
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Contact</a></li>
+        <li><a href="#"><i class="fa fa-envelope-o"></i> Contact</a></li>
         <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Suivez-nous <span class="caret"></span></a>
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="http://placehold.it/30x30" id="profile-pic" alt="">Follow-us <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="#"><i class="fa fa-youtube-square"></i> Youtube</a></li>
-            <li><a href="#"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+            <li><a href="https://www.facebook.com/lewagonformation"><i class="fa fa-facebook-square"></i> Facebook</a></li>
+            <li><a href="https://twitter.com/lewagonparis"><i class="fa fa-twitter-square"></i> Twitter</a></li>
           </ul>
         </li>
         <li><a href="#" class="btn btn-primary" id="nav-btn">Publish an announce</a></li>
@@ -41,77 +40,134 @@ Start by copying the HTML for the Boostrap navbar with an extra `.navbar-perso` 
 </nav>
 ```
 
-Of course, you have to find a logo image.
+Of course, you have to find your own logo image, and replace the profile picture by your users' profile picture.
 
 
-## CSS template
+## SASS template
+Our `navbar.scss` template implement the styling of the `.wagon-navbar`. Herebelow we detail the purpose of each Sass variable.
 
-### Link our stylesheet `navbar.css`
+### Navbar general appearance
 
-Copy our CSS file `navbar.css` in your website folder and link this stylesheet in your HTML file.
+- Change your navbar background and text color
+
+```sass
+$color: black;
+$bg: white;
+```
+
+- Change the height of its content and its horizontal and vertical paddings.
+
+```sass
+$height: 40px;
+$vertical-padding: 10px;
+$horizontal-padding: 20px;
+```
+
+- Customize your navbar bottom border if you want to:
+
+```sass
+$border-bottom-width: 0;
+$border-bottom-color: grey;
+```
+
+### Navbar button style
+
+Our `navbar.scss` gives you lots of flexibility for pimping your navbar button.
+
+```sass
+$btn-height: 40px;
+$btn-bg: lightgrey;
+$btn-color: black;
+$btn-horizontal-padding: 10px;
+$btn-top-border-width: 0;
+$btn-top-border-color: transparent;
+$btn-right-border-width: 0;
+$btn-right-border-color: transparent;
+$btn-bottom-border-width: 3px;
+$btn-bottom-border-color: grey;
+$btn-left-border-width: 0;
+$btn-left-border-color: transparent;
+```
+
+### Profile picture style
+
+You can also pimp your navbar profile picture, changin its radius and its border
+
+```sass
+// Set your profile picture
+$profile-radius: 20%;
+$profile-border-color: white;
+$profile-border-width: 2px;
+```
+
+
+## Integration
+
+### Static project
+
+If your have a static website.
+
+- install the `sass` gem
+
+```
+gem install sass
+```
+
+- go into your website folder in the terminal.
+
+Your folder should have the following architecture:
+
+```
+app
+ |
+ *-- sass
+ |    |
+ |    *-- navbar.scss
+ |
+ *--- stylesheets
+ |
+ *-- index.html
+```
+
+In your HTML `<head>`, don't forget to add the link to your stylesheet:
 
 ```html
-<link rel="stylesheet" href="path/to/navbar.css">
+<link rel="stylesheet" href="stylesheets/navbar.css">
 ```
 
-### How to change your navbar look
+Now you just have to ask sass to regenerate dynamically your CSS file when you change its SCSS version, with the following command:
 
-#### Navbar height
-
-- Replace `40px` by the height of your choice in all the lines `line-height: 40px;` of `navbar.css`.
-
-- **Do not change line-heights in all the media query section** (`@media screen and (max-width: 640px)`).
-
-- Change your `#logo` height to the **same line-height you have chosen**.
-
-- Notice that you have a 15px padding (top and bottom) so that your true navbar height will be the size you picked **+30px**. E.g, if you keep 40px as in our initial code your navbar will be **70px = 40px + 30px**
-
-
-#### Logo size
-
-To change the logo size you can just add extra `padding` to the logo. For instance:
-
-```css
-#logo{
-  padding: 10px;
-}
+```
+$ sass -w sass:stylesheets
 ```
 
-It will automatically resize your logo image.
+The sass commands ask your the original folder of your SCSS files and the target folder of the generated CSS files (`sass -w origin_folder:target_folder`). The `-w` (watch) option asks sass to watch your sass folder and dynamically regenerate your CSS files.
 
 
-#### Navbar button
+### In Rails
 
-If you have changed your navbar height, you have to adjust your navbar button margin-top.
+In Rails, Sass integration is much easier, if you have `sass-rails` and `bootstrap-sass` gems, you can just add the `navbar.scss` file to your Rails stylesheets, and then import this file in `application.css.scss`
 
-```css
-#nav-btn {
-  margin-top: 15px; /* change it depending on you navbar height */
-}
+
+```sass
+//application.css.scss
+
+// bootstrap-sass import
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+// our navbar over-ride
+@import "navbar";
 ```
 
+Here you go!
 
-Of course, feel free to change you button height and background!
+### Contribute, share your masterpiece!
 
-
-#### Drop-down menu
-
-If you have changed your navbar height, you may also have to re-position your dropdown list. For that adjust its `margin-top`
-
-```css
-.navbar-nav > li > .dropdown-menu{
-  border-radius: 0;
-  margin-top: 10px;
-}
-```
-
-
-### Go further and share it with us!
-
-In `airbnb.html` and `airbnb.css` (and `mailchimp.html` and `mailchimp.css`), we give you examples of possible customizations.
-
-Feel free to go further and send us your master-pieces
+Feel free to contribute to this project making pull requests, and to share with us your navbar masterpiece!
 
 - Twitter: https://twitter.com/lewagonparis
 - Facebook: facebook.com/lewagonformation
 - Website: http://lewagon.org
+
+Peace
