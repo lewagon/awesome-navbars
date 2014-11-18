@@ -1,8 +1,8 @@
-# Wagon SCSS Bootstrap navbar
+# SASS Bootstrap navbar
 
 ## HTML template
 
-Starts by copying our navbar HTML
+Start by copying our navbar HTML template
 
 ```html
 <nav class="navbar navbar-default navbar-fixed-top navbar-wagon" role="navigation">
@@ -40,11 +40,12 @@ Starts by copying our navbar HTML
 </nav>
 ```
 
-Of course, you have to find your own logo image, and replace the profile picture by your users' profile picture.
+Of course, you have to find your own logo image and replace the profile picture url by your profile picture.
 
 
 ## SASS template
-Our `navbar.scss` template implement the styling of the `.wagon-navbar`. Herebelow we detail the purpose of each Sass variable.
+
+Our `navbar.scss` implements style rules on the `.wagon-navbar` class. Herebelow we detail the purpose of each sass variable in `navbar.scss`.
 
 ### Navbar general appearance
 
