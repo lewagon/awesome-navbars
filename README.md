@@ -125,7 +125,7 @@ app
  |    |
  |    *-- navbar.scss
  |
- *--- stylesheets
+ *-- stylesheets
  |
  *-- index.html
 ```
