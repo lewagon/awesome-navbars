@@ -58,7 +58,7 @@ $bg: white;
 
 - Change the height of its content and its horizontal and vertical paddings.
 
-```sass
+```scss
 $height: 40px;
 $vertical-padding: 10px;
 $horizontal-padding: 20px;
@@ -66,7 +66,7 @@ $horizontal-padding: 20px;
 
 - Customize your navbar bottom border if you want to:
 
-```sass
+```scss
 $border-bottom-width: 0;
 $border-bottom-color: grey;
 ```
@@ -75,7 +75,7 @@ $border-bottom-color: grey;
 
 Our `navbar.scss` gives you lots of flexibility for pimping your navbar button.
 
-```sass
+```scss
 $btn-height: 40px;
 $btn-bg: lightgrey;
 $btn-color: black;
@@ -94,7 +94,7 @@ $btn-left-border-color: transparent;
 
 You can also pimp your navbar profile picture, changin its radius and its border
 
-```sass
+```scss
 // Set your profile picture
 $profile-radius: 20%;
 $profile-border-color: white;
@@ -150,7 +150,7 @@ The sass commands ask your the original folder of your SCSS files and the target
 In Rails, Sass integration is much easier, if you have `sass-rails` and `bootstrap-sass` gems, you can just add the `navbar.scss` file to your Rails stylesheets, and then import this file in `application.css.scss`
 
 
-```sass
+```scss
 //application.css.scss
 
 // bootstrap-sass import
