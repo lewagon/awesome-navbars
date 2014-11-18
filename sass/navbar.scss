@@ -1,7 +1,7 @@
 // Set your navbar general settings
 $color: black;
 $bg: white;
-$height: 40px;
+$height: 50px;
 $vertical-padding: 10px;
 $horizontal-padding: 20px;
 $border-bottom-width: 0;
@@ -107,7 +107,7 @@ $btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-borde
   padding: 0px;
 }
 
-.navbar-wagon #profile-pic{
+#profile-pic{
   border: $profile-border-width solid $profile-border-color;
   box-shadow: 0 0 2px rgb(200, 200, 200);
   height: $height - (2 * $profile-border-width);
@@ -124,7 +124,7 @@ $btn-margin-top: ($height + 2 * $vertical-padding - $btn-height - $btn-top-borde
 
 .navbar-wagon .navbar-nav > li > .dropdown-menu{
   border-radius: 0;
-  margin-top: $vertical-padding + 5px;
+  margin-top: 10px;
 }
 
 .navbar-wagon .navbar-nav > li > .dropdown-menu:before{

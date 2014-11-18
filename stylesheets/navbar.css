@@ -9,20 +9,20 @@
 
 .navbar-wagon .navbar-nav > li > a {
   color: black;
-  line-height: 40px;
+  line-height: 50px;
   padding-top: 10px;
   padding-bottom: 10px; }
 
 .navbar-wagon .navbar-nav > li > a:hover {
   color: black;
-  line-height: 40px;
+  line-height: 50px;
   padding-top: 10px;
   padding-bottom: 10px; }
 
 .navbar-wagon .navbar-nav > .open > a,
 .navbar-wagon .navbar-nav > .open > a:hover,
 .navbar-wagon .navbar-nav > .open > a:focus {
-  line-height: 40px;
+  line-height: 50px;
   padding-top: 10px;
   padding-bottom: 10px;
   color: black;
@@ -33,15 +33,14 @@
   display: block;
   color: black;
   padding-top: 10px;
-  padding-bottom: 10px;
-}
+  padding-bottom: 10px; }
 
 #nav-btn {
   line-height: 40px;
   padding: 0 10px;
   color: black;
   border-radius: 4px;
-  margin-top: 8.5px;
+  margin-top: 13.5px;
   border-radius: 2px;
   font-weight: bold;
   background-color: lightgrey;
@@ -54,20 +53,20 @@
 #nav-btn:hover {
   background-color: lightgrey;
   border-bottom: 2px solid grey;
-  margin-top: 9.5px; }
+  margin-top: 14.5px; }
 
 #nav-btn:active {
-  margin-top: 11.5px;
+  margin-top: 16.5px;
   border-bottom: none; }
 
 #logo {
-  height: 40px;
+  height: 50px;
   padding: 0px; }
 
-.navbar-wagon #profile-pic {
+#profile-pic {
   border: 2px solid white;
   box-shadow: 0 0 2px #c8c8c8;
-  height: 36px;
+  height: 46px;
   margin-right: 10px;
   border-radius: 20%; }
 
@@ -78,7 +77,7 @@
 
 .navbar-wagon .navbar-nav > li > .dropdown-menu {
   border-radius: 0;
-  margin-top: 15px; }
+  margin-top: 10px; }
 
 .navbar-wagon .navbar-nav > li > .dropdown-menu:before {
   background: white;
