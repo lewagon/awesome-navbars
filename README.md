@@ -174,7 +174,7 @@ Don't forget to inject the `erb` parts using rails helpers carefully, for exampl
             </li>
             <li>
               <%= link_to "/users/1/flats" do %>
-                <i class="fa fa-user"></i> Flats
+                <i class="fa fa-home"></i> Flats
               <% end %>
             </li>
             <li>
