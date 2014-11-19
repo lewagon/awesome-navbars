@@ -200,7 +200,7 @@ Don't forget to inject the `erb` parts using rails helpers carefully, for exampl
 Feel free to contribute to this project with pull requests, and to share with us your navbar masterpieces.
 
 - Twitter: https://twitter.com/lewagonparis
-- Facebook: facebook.com/lewagonformation
+- Facebook: https://facebook.com/lewagonformation
 - Website: http://lewagon.org
 
 Peace!
