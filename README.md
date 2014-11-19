@@ -179,7 +179,7 @@ Don't forget to inject the `erb` parts using rails helpers carefully, for exampl
             </li>
             <li>
               <%= link_to "/signout" do %>
-                <i class="fa fa-user"></i> Sign Out
+                <i class="fa fa-sign-out"></i> Sign Out
               <% end %>
             </li>
           </ul>
