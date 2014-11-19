@@ -1,37 +1,37 @@
 .navbar-wagon {
-  background: white;
+  background: transparent;
   border: none;
   font-weight: 400;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 50px;
+  padding-right: 50px;
   border-bottom: 0 solid grey;
   min-height: 0; }
 
 .navbar-wagon .navbar-nav > li > a {
-  color: black;
-  line-height: 50px;
+  color: white;
+  line-height: 30px;
   padding-top: 10px;
   padding-bottom: 10px; }
 
 .navbar-wagon .navbar-nav > li > a:hover {
-  color: black;
-  line-height: 50px;
+  color: white;
+  line-height: 30px;
   padding-top: 10px;
   padding-bottom: 10px; }
 
 .navbar-wagon .navbar-nav > .open > a,
 .navbar-wagon .navbar-nav > .open > a:hover,
 .navbar-wagon .navbar-nav > .open > a:focus {
-  line-height: 50px;
+  line-height: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
-  color: black;
+  color: white;
   background-color: transparent; }
 
 .navbar-wagon .navbar-brand,
 .navbar-wagon .navbar-brand:hover {
   display: block;
-  color: black;
+  color: white;
   padding-top: 10px;
   padding-bottom: 10px; }
 
@@ -40,7 +40,7 @@
   padding: 0 10px;
   color: black;
   border-radius: 4px;
-  margin-top: 13.5px;
+  margin-top: 3.5px;
   border-radius: 2px;
   font-weight: bold;
   background-color: lightgrey;
@@ -53,22 +53,22 @@
 #nav-btn:hover {
   background-color: lightgrey;
   border-bottom: 2px solid grey;
-  margin-top: 14.5px; }
+  margin-top: 4.5px; }
 
 #nav-btn:active {
-  margin-top: 16.5px;
+  margin-top: 6.5px;
   border-bottom: none; }
 
 #logo {
-  height: 50px;
+  height: 30px;
   padding: 0px; }
 
 #profile-pic {
   border: 2px solid white;
   box-shadow: 0 0 2px #c8c8c8;
-  height: 46px;
+  height: 26px;
   margin-right: 10px;
-  border-radius: 20%; }
+  border-radius: 50%; }
 
 .navbar-wagon .navbar-toggle {
   border-color: #dddddd;
@@ -101,7 +101,7 @@
   .navbar-wagon .navbar-brand,
   .navbar-wagon .navbar-brand:hover {
     display: block;
-    color: black;
+    color: white;
     padding-top: 0;
     padding-bottom: 0; } }
 
