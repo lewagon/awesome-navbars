@@ -134,7 +134,7 @@ In Rails, the integration is easy if you have installed `sass-rails` and `bootst
 
 Here you go!
 
-### erb template
+### ERB template
 
 Don't forget to inject the `erb` parts using rails helpers carefully, for example:
 
