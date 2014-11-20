@@ -161,6 +161,7 @@ Don't forget to inject the `erb` parts using rails helpers carefully, for exampl
           <%= link_to "/users/1/messages" do %>
             <i class="fa fa-envelope-o"></i> Messages
           <% end %>
+        </li>
         <li class="dropdown">
           <%= link_to "#", {class: "dropdown-toggle", "data-toggle" => "dropdown", "role" => "button", "aria-expanded" => "false"} do %>
             <%= image_tag "http://placehold.it/30x30", id: "profile-pic" %>
