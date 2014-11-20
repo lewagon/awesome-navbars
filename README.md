@@ -50,7 +50,7 @@ For our design to work you must have the following HTML elements:
 - your `nav` should have an additional **`class="navbar-wagon"`**
 - your logo should be an image and have a **`id="logo"`**
 - your profile picture should have a **`id="profile-pic"`**
-- you button should have a **`class="nav-btn`**
+- you button should have a **`id="nav-btn"`**
 
 
 ## SASS template
