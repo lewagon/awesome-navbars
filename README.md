@@ -2,46 +2,12 @@
 
 ## HTML template
 
-Start by copying our navbar HTML template
+Start by copying our navbar template:
 
-```html
-<nav class="navbar navbar-default navbar-fixed-top navbar-wagon" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-        <img src="images/logo.png" id="logo" alt="">
-      </a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-
-
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#"><i class="fa fa-envelope-o"></i> Contact</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><img src="http://placehold.it/30x30" id="profile-pic" alt="">Follow-us <span class="caret"></span></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="https://www.facebook.com/lewagonformation"><i class="fa fa-facebook-square"></i> Facebook</a></li>
-            <li><a href="https://twitter.com/lewagonparis"><i class="fa fa-twitter-square"></i> Twitter</a></li>
-          </ul>
-        </li>
-        <li><a href="#" class="btn btn-primary" id="nav-btn">Publish an announce</a></li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-```
+- [HTML version](https://github.com/lewagon/awesome-navbars/blob/master/templates/_navbar.html)
+- [ERB version](https://github.com/lewagon/awesome-navbars/blob/master/templates/_navbar.html.erb)
 
 Of course, you have to find your own logo image and replace the profile picture url by your profile picture.
-
 
 ### Respect our classes
 
@@ -53,9 +19,9 @@ For our design to work you must have the following HTML elements:
 - you button should have a **`id="nav-btn"`**
 
 
-## SASS template
+## SCSS template
 
-Our `navbar.scss` implements style rules on the `.wagon-navbar` class. Herebelow we detail the purpose of each sass variable in `navbar.scss`.
+Our `navbar.css.scss` implements style rules on the `.wagon-navbar` class. Herebelow we detail the purpose of each sass variable in `navbar.css.scss`.
 
 ### Wagon-navbar Sass variable
 
@@ -136,65 +102,7 @@ Here you go!
 
 ### ERB template
 
-Don't forget to inject the `erb` parts using rails helpers carefully, for example:
-
-```erb
-<nav class="navbar navbar-default navbar-fixed-top navbar-wagon" role="navigation">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#">
-        <%= image_tag "logo.png", id: "logo" %>
-      </a>
-    </div>
-
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav navbar-right">
-        <li>
-          <%= link_to "/users/1/messages" do %>
-            <i class="fa fa-envelope-o"></i> Messages
-          <% end %>
-        </li>
-        <li class="dropdown">
-          <%= link_to "#", {class: "dropdown-toggle", "data-toggle" => "dropdown", "role" => "button", "aria-expanded" => "false"} do %>
-            <%= image_tag "http://placehold.it/30x30", id: "profile-pic" %>
-            Profile <span class="caret"></span>
-          <% end %>
-          <ul class="dropdown-menu" role="menu">
-            <li>
-              <%= link_to "/users/1" do %>
-                <i class="fa fa-user"></i> Profile
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "/users/1/flats" do %>
-                <i class="fa fa-home"></i> Flats
-              <% end %>
-            </li>
-            <li>
-              <%= link_to "/signout" do %>
-                <i class="fa fa-sign-out"></i> Sign Out
-              <% end %>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <%= link_to "/flats/new", class: "btn btn-primary", id: "nav-btn" do %>
-            Publish an announce
-          <% end %>
-        </li>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
-```
+Don't forget to modify our [ERB template](https://github.com/lewagon/awesome-navbars/blob/master/templates/_navbar.html.erb) carefully using Rails helpers.
 
 ## Contribute, share your masterpiece!
 
