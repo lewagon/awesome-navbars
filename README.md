@@ -1,6 +1,6 @@
-# SASS Bootstrap navbar
+# SCSS Bootstrap navbar
 
-## HTML template
+## Templates
 
 Start by copying our navbar template:
 
@@ -23,7 +23,7 @@ For our design to work you must have the following HTML elements:
 
 Our `navbar.css.scss` implements style rules on the `.wagon-navbar` class. Herebelow we detail the purpose of each sass variable in `navbar.css.scss`.
 
-### Wagon-navbar Sass variable
+### Wagon-navbar SCSS variable
 
 #### Navbar general appearance
 
@@ -51,7 +51,7 @@ $border-bottom-color: transparent;
 
 #### Navbar button style
 
-Our `navbar.scss` gives you lot of flexibility for pimping your navbar button.
+Our `navbar.css.scss` gives you lot of flexibility for pimping your navbar button.
 
 ```scss
 $btn-height: 40px;
@@ -112,4 +112,4 @@ Feel free to contribute to this project with pull requests, and to share with us
 - Facebook: https://facebook.com/lewagonformation
 - Website: http://lewagon.org
 
-Peace!
+Peace
