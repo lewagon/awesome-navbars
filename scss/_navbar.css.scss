@@ -1,10 +1,10 @@
 /* -------------------------------------
- * Colors and font
+ * Colors & Fonts
  * ------------------------------------- */
 $navbar-color: white;
+$navbar-hover-color: #D4312D;
+$navbar-font-family: "Montserrat", sans-serif; // Google fonts
 $navbar-bg: transparent;
-$navbar-font-family: "Montserrat", sans-serif;
-
 
 /* -------------------------------------
  * Box model
@@ -31,10 +31,8 @@ $navbar-profile-radius: 50%;
 $navbar-profile-border-color: white;
 $navbar-profile-border-width: 2px;
 
-
-
 /* -------------------------------------
- * SCSS code (you're not obliged to read it :)
+ * SCSS code
  * ------------------------------------- */
 .navbar-wagon{
   background: $navbar-bg;
@@ -47,19 +45,23 @@ $navbar-profile-border-width: 2px;
   min-height: 0;
 
   .navbar-nav > li > a,
-  .navbar-nav > li > a:hover,
   .navbar-nav > .open > a,
-  .navbar-nav > .open > a:hover,
-  .navbar-nav > .open > a:focus   {
+  .navbar-nav > li > a:focus,
+  .navbar-nav > .open > a:focus {
     color: $navbar-color;
     line-height: $navbar-height;
     padding-top: $navbar-vertical-padding;
     padding-bottom: $navbar-vertical-padding;
+    background-color: transparent;
+    -webkit-transition: all 0.3s ease;
+       -moz-transition: all 0.3s ease;
+        -ms-transition: all 0.3s ease;
+            transition: all 0.3s ease;
   }
 
-  .navbar-nav > .open > a,
-  .navbar-nav > .open > a:hover,
-  .navbar-nav > .open > a:focus {
+  .navbar-nav > li > a:hover,
+  .navbar-nav > .open > a:hover{
+    color: $navbar-hover-color;
     background-color: transparent;
   }
 

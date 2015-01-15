@@ -27,15 +27,16 @@ Our `_navbar.css.scss` implements style rules on the `.wagon-navbar` class. Here
 
 #### General appearance
 
-Change your navbar background and text color
+Change your navbar background and link color, and link hover color
 
 ```scss
 /* -------------------------------------
- * Colors and font
+ * Colors & Fonts
  * ------------------------------------- */
 $navbar-color: white;
+$navbar-hover-color: #D4312D;
+$navbar-font-family: "Montserrat", sans-serif; // Google fonts
 $navbar-bg: transparent;
-$navbar-font-family: "Montserrat", sans-serif;
 ```
 
 Change the height, spacing and borders
