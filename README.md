@@ -23,7 +23,7 @@ For our navbar styles to apply, you have to:
 
 Our `_navbar.css.scss` implements style rules on the `.wagon-navbar` class. Herebelow we detail the role of each sass variable.
 
-### Wagon-navbar SCSS variable
+### Navbar-Wagon SCSS variables
 
 #### General appearance
 
