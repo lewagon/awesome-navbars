@@ -16,7 +16,7 @@ For our navbar styles to apply, you have to:
 - add **`class="navbar-wagon"`** to the initial Bootstrap `<nav>`
 - your logo should be a `<img>` **inside** the `.navbar-brand` link.
 - your profile picture should hold the class **`class="img-avatar"`**
-- if your want a link with a "button-style", add it a **`class="btn"`**
+- To apply a "button-style" to a link, add it a **`class="btn"`**
 
 
 ## SCSS template
@@ -84,29 +84,41 @@ $navbar-profile-border-width: 2px;
 
 ### Rails assets
 
-In Rails, the integration is easy if you have installed `sass-rails` and `bootstrap-sass` gems. You can just add the `navbar.scss` file to your Rails stylesheets, and then import this file in `application.css.scss`
+In Rails, the integration is easy if you have installed `sass-rails` and `bootstrap-sass` gems. You can just add the `_navbar.scss` file to your Rails **layout stylesheets**, and then import this file in `application.css.scss`
 
 
 ```scss
-//application.css.scss
+//stylesheets/layout/_navbar.css.scss
 
-// "bootstrap-sass" imports
-@import "bootstrap-sprockets";
-@import "bootstrap";
+// Our navbar SCSS code
+```
 
-// Import our navbar.scss after bootstrap
+```scss
+//stylesheets/layout/_index.css.scss
 @import "navbar";
+@import "footer";
+@import "sidebar";
+```
+
+```scss
+//stylesheets/application.css.scss
+
+/* -------------------------------------
+ * Layout stylesheets
+ * ------------------------------------- */
+ @import "layout/index";
+
 ```
 
 Here you go!
 
 ### ERB template
 
-Don't forget to modify our [ERB template](https://github.com/lewagon/awesome-navbars/blob/master/templates/_navbar.html.erb) carefully using Rails helpers.
+Don't forget to modify our [ERB template](https://github.com/lewagon/awesome-navbars/blob/master/templates/_navbar.html.erb) carefully if you use different path helpers.
 
 ## Contribute, share your masterpiece!
 
-Feel free to contribute to this project with pull requests, and to share with us your navbar masterpieces.
+Feel free to contribute to this project with pull requests, and to share with us your navbar masterpieces!
 
 - Twitter: https://twitter.com/lewagonparis
 - Facebook: https://facebook.com/lewagonformation
