@@ -5,78 +5,78 @@
 Start by copying our navbar template:
 
 - [HTML version](https://github.com/lewagon/awesome-navbars/blob/master/templates/_navbar.html)
-- [ERB version](https://github.com/lewagon/awesome-navbars/blob/master/templates/_navbar.html.erb)
+- [ERB version](https://github.com/lewagon/awesome-navbars/blob/master/templates/_navbar.html.erb) (an example with [devise](https://github.com/plataformatec/devise) path helpers)
 
-Of course, you have to find your own logo image and replace the profile picture url by your profile picture.
+Of course, you have to replace the assets (logo, profile picture) by your own.
 
-### Respect our classes
+### Respect the navbar markup
 
-For our design to work you must have the following HTML elements:
+For our navbar styles to apply, you have to:
 
-- your `nav` should have an additional **`class="navbar-wagon"`**
-- your logo should be an image and have a **`id="logo"`**
-- your profile picture should have a **`id="profile-pic"`**
-- you button should have a **`id="nav-btn"`**
+- add **`class="navbar-wagon"`** to the initial Bootstrap `<nav>`
+- your logo should be a `<img>` **inside** the `.navbar-brand` link.
+- your profile picture should hold the class **`class="img-avatar"`**
+- if your want a link with a "button-style", add it a **`class="btn"`**
 
 
 ## SCSS template
 
-Our `navbar.css.scss` implements style rules on the `.wagon-navbar` class. Herebelow we detail the purpose of each sass variable in `navbar.css.scss`.
+Our `_navbar.css.scss` implements style rules on the `.wagon-navbar` class. Herebelow we detail the role of each sass variable.
 
 ### Wagon-navbar SCSS variable
 
-#### Navbar general appearance
+#### General appearance
 
 Change your navbar background and text color
 
 ```scss
-$color: black;
-$bg: white;
+/* -------------------------------------
+ * Colors and font
+ * ------------------------------------- */
+$navbar-color: white;
+$navbar-bg: transparent;
+$navbar-font-family: "Montserrat", sans-serif;
 ```
 
-Change the height of its content and its horizontal and vertical paddings.
+Change the height, spacing and borders
 
 ```scss
-$height: 40px;
-$vertical-padding: 10px;
-$horizontal-padding: 20px;
-```
-
-Customize your navbar bottom border if you want to:
-
-```scss
-$border-bottom-width: 0;
-$border-bottom-color: transparent;
+/* -------------------------------------
+ * Box model
+ * ------------------------------------- */
+$navbar-height: 50px;
+$navbar-vertical-padding: 5px;
+$navbar-horizontal-padding: 20px;
+$navbar-border-bottom-width: 0;
+$navbar-border-bottom-color: grey;
 ```
 
 #### Navbar button style
 
-Our `navbar.css.scss` gives you lot of flexibility for pimping your navbar button.
+We give you some variables for pimping your navbar buttons.
 
 ```scss
-$btn-height: 40px;
-$btn-bg: lightgrey;
-$btn-color: black;
-$btn-horizontal-padding: 10px;
-$btn-top-border-width: 0;
-$btn-top-border-color: transparent;
-$btn-right-border-width: 0;
-$btn-right-border-color: transparent;
-$btn-bottom-border-width: 3px;
-$btn-bottom-border-color: grey;
-$btn-left-border-width: 0;
-$btn-left-border-color: transparent;
+/* -------------------------------------
+ * Navbar button
+ * ------------------------------------- */
+$navbar-btn-height: 40px;
+$navbar-btn-bg: lightgrey;
+$navbar-btn-color: white;
+$navbar-btn-horizontal-padding: 10px;
+$navbar-btn-radius: 2px;
 ```
 
-#### Profile picture style
+#### Profile picture
 
-You can also pimp your navbar profile picture by changing its radius and its border
+You can also change the style of your navbar profile picture playing on its radius and border
 
 ```scss
-// Set your profile picture
-$profile-radius: 20%;
-$profile-border-color: white;
-$profile-border-width: 2px;
+/* -------------------------------------
+ * Navbar profile picture
+ * ------------------------------------- */
+$navbar-profile-radius: 50%;
+$navbar-profile-border-color: white;
+$navbar-profile-border-width: 2px;
 ```
 
 
