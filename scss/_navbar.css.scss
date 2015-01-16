@@ -43,6 +43,7 @@ $navbar-profile-border-width: 2px;
   padding-right: $navbar-horizontal-padding;
   border-bottom: $navbar-border-bottom-width solid $navbar-border-bottom-color;
   min-height: 0;
+  transition: background 0.4s ease;
 
   .navbar-nav > li > a,
   .navbar-nav > .open > a,
