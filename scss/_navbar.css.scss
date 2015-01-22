@@ -34,7 +34,7 @@ $navbar-profile-border-width: 2px;
 /* -------------------------------------
  * SCSS code
  * ------------------------------------- */
-.navbar-wagon{
+.navbar-wagon {
   background: $navbar-bg;
   font-family: $navbar-font-family;
   border: none;
@@ -49,6 +49,7 @@ $navbar-profile-border-width: 2px;
   .navbar-nav > .open > a,
   .navbar-nav > li > a:focus,
   .navbar-nav > .open > a:focus {
+    outline: none;
     color: $navbar-color;
     line-height: $navbar-height;
     padding-top: $navbar-vertical-padding;
@@ -61,14 +62,14 @@ $navbar-profile-border-width: 2px;
   }
 
   .navbar-nav > li > a:hover,
-  .navbar-nav > .open > a:hover{
+  .navbar-nav > .open > a:hover {
     color: $navbar-hover-color;
     background-color: transparent;
   }
 
   .navbar-brand,
-  .navbar-brand:hover
-   {
+  .navbar-brand:hover {
+    outline: none;
     color: $navbar-color;
     padding-top: $navbar-vertical-padding;
     padding-bottom: $navbar-vertical-padding;
@@ -88,7 +89,7 @@ $navbar-profile-border-width: 2px;
     }
   }
 
-  .navbar-brand img, .navbar-brand svg, .navbar-brand object{
+  .navbar-brand img, .navbar-brand svg {
     height: $navbar-height;
     padding: 0px;
   }
@@ -134,15 +135,16 @@ $navbar-profile-border-width: 2px;
  * ------------------------------------- */
 
 @media screen and (max-width: 768px) {
-  .navbar-brand img, .navbar-brand svg, .navbar-brand object{
-    height: 50px;
-  }
-  .navbar-wagon .navbar-brand,
-  .navbar-wagon .navbar-brand:hover
-   {
-    display: block;
-    color: $navbar-color;
-    padding-top: 0;
-    padding-bottom: 0;
+  .navbar-wagon {
+    .navbar-brand img, .navbar-brand svg {
+      height: 50px;
+    }
+    .navbar-brand, .navbar-brand:hover
+     {
+      display: block;
+      color: $navbar-color;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
   }
 }
