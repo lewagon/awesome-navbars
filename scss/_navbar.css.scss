@@ -1,10 +1,10 @@
 /* -------------------------------------
  * Colors & Fonts
  * ------------------------------------- */
-$navbar-color: white;
-$navbar-hover-color: #D4312D;
-$navbar-font-family: "Montserrat", sans-serif; // Google fonts
-$navbar-bg: transparent;
+$navbar-color: black;
+$navbar-hover-color: $yellow;
+$navbar-font-family: $header-font;
+$navbar-bg: white;
 
 /* -------------------------------------
  * Box model
