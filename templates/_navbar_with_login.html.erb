@@ -19,7 +19,7 @@
         <% if user_signed_in? %>
           <li>
             <%= link_to "#" do %>
-              <i class="fa fa-envelope-o"></i> <%= link_to t(".messages", default: "Messages"), "#" %>
+              <i class="fa fa-envelope-o"></i> <%= t(".messages", default: "Messages") %>
             <% end %>
           </li>
           <li class="dropdown">
