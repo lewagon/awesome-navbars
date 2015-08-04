@@ -34,7 +34,7 @@ $navbar-profile-border-width: 2px;
 /* -------------------------------------
  * SCSS code
  * ------------------------------------- */
-.navbar-wagon {
+.navbar-bootstrap-wagon {
   background: $navbar-bg;
   font-family: $navbar-font-family;
   border: none;
@@ -132,7 +132,7 @@ $navbar-profile-border-width: 2px;
  * ------------------------------------- */
 
 @media screen and (max-width: 768px) {
-  .navbar-wagon {
+  .navbar-bootstrap-wagon {
     .navbar-brand img, .navbar-brand svg {
       height: 50px;
     }
