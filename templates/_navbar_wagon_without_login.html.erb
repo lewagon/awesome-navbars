@@ -7,23 +7,12 @@
   <!-- Right Navigation -->
   <div class="navbar-wagon-right hidden-xs hidden-sm">
 
-    <!-- Search form -->
-    <form action="" class="navbar-wagon-search">
-      <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
-      <button type="submit" class="navbar-wagon-search-btn">
-        <i class="fa fa-search"></i>
-      </button>
-    </form>
+    <!-- Links -->
+    <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+    <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
 
-    <!-- Notification -->
-    <%= link_to "#", class: "navbar-wagon-item navbar-wagon-link" do %>
-      <div class="badge-container">
-        <i class="fa fa-envelope-o"></i>
-        <div class="badge badge-blue">3</div>
-      </div>
-    <% end %>
-
-    <!-- Profile picture and dropdown -->
+    <!-- Avatar with dropdown menu -->
     <div class="navbar-wagon-item">
       <div class="dropdown">
         <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
@@ -41,9 +30,6 @@
         </ul>
       </div>
     </div>
-
-    <!-- Button (call-to-action) -->
-    <%= link_to t(".top_call_to_action", default: "Post stuff"), "#", class: "navbar-wagon-item navbar-wagon-button btn" %>
   </div>
 
   <!-- Dropdown list appearing on mobile only -->
