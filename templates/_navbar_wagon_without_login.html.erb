@@ -1,47 +1,53 @@
-<div class="navbar-wagon">
-  <!-- Logo -->
-  <%= link_to root_path, class: "navbar-wagon-brand" do %>
-    <%= image_tag "logo.png", height: 50 %>
+<div class="navbar-lewagon">
+  <%= link_to root_path do %>
+    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png", class: "brand" %>
   <% end %>
 
-  <!-- Right Navigation -->
-  <div class="navbar-wagon-right hidden-xs hidden-sm">
+  <!-- displayed on laptops -->
+  <div class="navbar-lewagon-actions d-none d-sm-flex">
+    <%= link_to "Browse flats", "#", class: "navbar-lewagon-link" %>
+    <div class="badge-container">
+      <%= link_to "#", class: "navbar-lewagon-link" do %>
+        Messages <span class="badge badge-pill badge-secondary text-white">5</span>
+      <% end %>
+    </div>
+    <div class="dropdown">
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar dropdown-toggle", id: "dropdownMenuButton", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <%= link_to "#", class: "dropdown-item" do %>
+            <i class="fas fa-user"></i> Account
+          <% end %>
+          <%= link_to "#", class: "dropdown-item" do %>
+            <i class="fas fa-cogs"></i> Settings
+          <% end %>
+          <%= link_to "#", class: "dropdown-item" do %>
+            <i class="fas fa-sign-out-alt"></i> Log out
+          <% end %>
+        </div>
+     </div>
+  </div>
 
-    <!-- Links -->
-    <%= link_to "Host", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Trips", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-    <%= link_to "Messages", "#", class: "navbar-wagon-item navbar-wagon-link" %>
-
-    <!-- Avatar with dropdown menu -->
-    <div class="navbar-wagon-item">
-      <div class="dropdown">
-        <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
-        <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-          <li>
-            <%= link_to "#" do %>
-              <i class="fa fa-user"></i> <%= t(".profile", default: "Profile") %>
-            <% end %>
-          </li>
-          <li>
-            <%= link_to "#" do %>
-              <i class="fa fa-cog"></i>  <%= t(".settings", default: "Settings") %>
-            <% end %>
-          </li>
-        </ul>
+  <!-- displayed on phone / tablet -->
+  <div class="navbar-lewagon-actions d-block d-sm-none">
+    <div class="dropdown">
+      <i class="fas fa-bars" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+        <%= link_to "#", class: "dropdown-item" do %>
+          <i class="fas fa-home"></i> Browse flats
+        <% end %>
+        <%= link_to "#", class: "dropdown-item" do %>
+          <i class="fas fa-comments"></i> Messages <span class="badge badge-pill badge-secondary text-white">5</span>
+        <% end %>
+        <%= link_to "#", class: "dropdown-item" do %>
+          <i class="fas fa-user"></i> Account
+        <% end %>
+        <%= link_to "#", class: "dropdown-item" do %>
+          <i class="fas fa-cogs"></i> Settings
+        <% end %>
+        <%= link_to "#", class: "dropdown-item" do %>
+          <i class="fas fa-sign-out-alt"></i> Log out
+        <% end %>
       </div>
     </div>
   </div>
-
-  <!-- Dropdown list appearing on mobile only -->
-  <div class="navbar-wagon-item hidden-md hidden-lg">
-    <div class="dropdown">
-      <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
-      <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
-      </ul>
-    </div>
-  </div>
 </div>
-
