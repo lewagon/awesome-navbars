@@ -1,53 +1,28 @@
-<div class="navbar-lewagon">
-  <%= link_to root_path do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png", class: "brand" %>
-  <% end %>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+    <% end %>
 
-  <!-- displayed on laptops -->
-  <div class="navbar-lewagon-actions d-none d-sm-flex">
-    <%= link_to "Browse flats", "#", class: "navbar-lewagon-link" %>
-    <div class="badge-container">
-      <%= link_to "#", class: "navbar-lewagon-link" do %>
-        Messages <span class="badge badge-pill badge-secondary text-white">5</span>
-      <% end %>
-    </div>
-    <div class="dropdown">
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/cveneziani", class: "avatar dropdown-toggle", id: "dropdownMenuButton", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-          <%= link_to "#", class: "dropdown-item" do %>
-            <i class="fas fa-user"></i> Account
-          <% end %>
-          <%= link_to "#", class: "dropdown-item" do %>
-            <i class="fas fa-cogs"></i> Settings
-          <% end %>
-          <%= link_to "#", class: "dropdown-item" do %>
-            <i class="fas fa-sign-out-alt"></i> Log out
-          <% end %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Home", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "Messages", "#", class: "nav-link" %>
+      </li>
+      <li class="nav-item dropdown">
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+          <%= link_to "Action", "#", class: "dropdown-item" %>
+          <%= link_to "Another action", "#", class: "dropdown-item" %>
         </div>
-     </div>
-  </div>
-
-  <!-- displayed on phone / tablet -->
-  <div class="navbar-lewagon-actions d-block d-sm-none">
-    <div class="dropdown">
-      <i class="fas fa-bars" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
-      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
-        <%= link_to "#", class: "dropdown-item" do %>
-          <i class="fas fa-home"></i> Browse flats
-        <% end %>
-        <%= link_to "#", class: "dropdown-item" do %>
-          <i class="fas fa-comments"></i> Messages <span class="badge badge-pill badge-secondary text-white">5</span>
-        <% end %>
-        <%= link_to "#", class: "dropdown-item" do %>
-          <i class="fas fa-user"></i> Account
-        <% end %>
-        <%= link_to "#", class: "dropdown-item" do %>
-          <i class="fas fa-cogs"></i> Settings
-        <% end %>
-        <%= link_to "#", class: "dropdown-item" do %>
-          <i class="fas fa-sign-out-alt"></i> Log out
-        <% end %>
-      </div>
-    </div>
+      </li>
+    </ul>
   </div>
 </div>
